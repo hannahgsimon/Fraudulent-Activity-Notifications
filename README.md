@@ -108,7 +108,155 @@ Total notifications: 2
 
 ---
 
-## 🧪 Stress Testing
+## 🧪 Test Cases
+
+This section includes both valid and invalid test cases to help you verify correctness and robustness.
+
+### ✅ Valid Test Cases
+
+🔹 **Case 1: Basic Example (from problem description)**
+```yaml
+Input:
+9 5
+2 3 4 2 3 6 8 4 5
+
+Expected Output:
+Total notifications: 2
+```
+
+🔹 **Case 2: No notifications triggered**
+```yaml
+Input:
+5 4
+1 2 3 4 4
+
+Expected Output:
+Total notifications: 0
+```
+
+🔹 **Case 3: All same values**
+```yaml
+Input:
+6 3
+10 10 10 10 10 10
+
+Expected Output:
+Total notifications: 0
+Explanation: Every value is equal to the median, so value >= 2 × median is false (e.g., 10 < 2×10 = 20).
+```
+
+🔹 **Case 4: Large input within range**
+```yaml
+Input:
+10 4
+1 2 3 4 100 100 100 100 100 100
+
+Expected Output:
+Total notifications: 2
+```
+
+🔹 **Case 5: d equals n (only one day checked)**
+```yaml
+Input:
+5 5
+1 1 1 1 10
+
+Expected Output:
+Total notifications: 0
+Explanation: Since d = n, there are no days after the trailing window to trigger a notification.
+```
+
+### ❌ Invalid Input Test Cases
+
+🔻 **Case 6: Too few values for n and d**
+```yaml
+Input:
+5
+
+Expected Output:
+Invalid input: expected 2 values for n and d, but got 1.
+```
+
+🔻 **Case 7: Too many values for n and d**
+```yaml
+Input:
+5 3 1
+
+Expected Output:
+Invalid input: expected 2 values for n and d, but got 3.
+```
+
+🔻 **Case 8: Non-integer input for n or d**
+```yaml
+Input:
+a b
+
+Expected Output:
+Invalid input: both n and d must be integers.
+```
+
+🔻 **Case 9: d > n**
+```yaml
+Input:
+3 4
+
+Expected Output:
+Invalid input: you entered d=4, but d must be between 1 and n=3.
+```
+
+🔻 **Case 10: Too few expenditures**
+```yaml
+Input:
+5 3
+1 2 3
+
+Expected Output:
+Invalid input: expected n=5 expenditures, but got 3.
+```
+
+🔻 **Case 11: Too many expenditures**
+```yaml
+Input:
+5 3
+1 2 3 4 5 6
+
+Expected Output:
+Invalid input: expected n=5 expenditures, but got 6.
+```
+
+🔻 **Case 12: Invalid characters in expenditures**
+```yaml
+Input:
+5 2
+10 20 x 30 40
+
+Expected Output:
+Invalid input at day 3: 'x' is not an integer.
+```
+
+🔻 **Case 13: Expenditure out of range**
+```yaml
+Input:
+5 2
+10 20 250 30 40
+
+Expected Output:
+Invalid expenditure at day 3: must be between 0 and 200.
+```
+
+🔻 **Case 14: Empty input for n and d**
+
+*(User presses Enter without typing anything)*
+
+```yaml
+Expected Output:
+Invalid input: expected 2 values for n and d, but got 0.
+```
+
+---
+
+## ⚠️ Bonus Edge Case: Stress Testing
+🔸 **Case 15: Maximum allowed values (stress test — optional)**
 
 The file `stress_test.txt` contains input designed to test the algorithm under maximum constraints:
 
