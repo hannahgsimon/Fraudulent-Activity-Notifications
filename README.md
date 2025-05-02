@@ -1,6 +1,6 @@
 # Fraudulent Activity Notifications
 
-## Overview
+## 📖 Overview
 This repository contains two implementations of a **Fraudulent Activity Notification** system, one written in **C** and the other in **Python 3**. The program simulates a bank alert system that notifies clients when their spending on a given day is at least **twice the median** of spending over a trailing number of days.  
 
 For a detailed explanation of the algorithm, see the original problem on HackerRank:
@@ -38,7 +38,7 @@ https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem
 
 ---
 
-## 🧠 Algorithm Overview
+## 📐 Algorithm Overview
 
 Both implementations use the same underlying algorithm:
 
@@ -68,12 +68,12 @@ Both implementations use the same underlying algorithm:
 
 ---
 
-## 🚀 How to Run the Code
+## ▶️ How to Run the Code
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
+git clone https://github.com/hannahgsimon/Fraudulent-Activity-Notifications.git
+cd Fraudulent-Activity-Notifications
 ```
 
 ### 2. Run the C Version
@@ -105,6 +105,7 @@ Enter the expenditures for 9 days (space-separated values):
 
 Total notifications: 2
 ```
+
 ---
 
 ## 🧪 Stress Testing
@@ -116,7 +117,7 @@ The file `stress_test.txt` contains input designed to test the algorithm under m
 
 ### Expected Result
 Since all values are equal, the median remains `1` throughout, and no day's spending reaches or exceeds `2 × median`.  
-➡️ **Expected output: `0 notifications`**
+→ **Expected output: `0 notifications`**
 
 This test ensures that both implementations handle large inputs efficiently without performance degradation or memory issues.
 
@@ -142,12 +143,14 @@ python3 activity_notifications.py < stress_input.txt
 ```
 Total notifications: 0
 ```
+
 ---
 
 ## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+---
 
-## Contact
+## 📬 Contact
 For questions or feedback, please contact Hannah G. Simon at hgsimon2@gmail.com.
