@@ -272,6 +272,9 @@ This test ensures that both implementations handle large inputs efficiently with
 ### How to Run the Stress Test
 
 1. Generate the Input File (Linux/macOS/WSL)
+
+You can either use the pre-generated `stress_input.txt` file already included in the GitHub repository, **or** generate it manually using the following commands:
+
 ```bash
 echo "200000 100000" > stress_input.txt
 python3 -c "print(' '.join(['1'] * 200000))" >> stress_input.txt
